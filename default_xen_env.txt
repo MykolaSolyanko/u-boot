@@ -1,7 +1,7 @@
 android_keymint_needed=N
-blk_deivce_if=pvblock
+blk_deivce_if=virtio
 blk_device_id=0
-bootcmd=run update_bootargs; run bootcmd_android
+bootcmd=run update_bootargs; virtio scan; run bootcmd_android
 bootcmd_android=verified_boot_android ${blk_deivce_if} ${blk_device_id}#misc
 bootdelay=3
 fdtaddr=0
